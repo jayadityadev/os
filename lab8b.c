@@ -25,22 +25,22 @@ void main() {
 
         switch (ch) {
             case 1:
-                printf("Enter the name of the directory: ");
+                printf("Enter the directory name: ");
                 scanf("%s", dir[dcnt].dname);
                 dir[dcnt].fcnt = 0;
                 dcnt++;
-                printf("Directory '%s' created successfully.\n", dir[dcnt - 1].dname);
+                printf("Directory created successfully.\n");
                 break;
 
             case 2:
-                printf("Enter the name of the directory: ");
+                printf("Enter the directory name: ");
                 scanf("%s", d);
                 for (i = 0; i < dcnt; i++) {
                     if (strcmp(d, dir[i].dname) == 0) {
-                        printf("Enter the name of the file to create: ");
+                        printf("Enter the file name: ");
                         scanf("%s", dir[i].fname[dir[i].fcnt]);
                         dir[i].fcnt++;
-                        printf("File '%s' created successfully in directory '%s'.\n", dir[i].fname[dir[i].fcnt - 1], d);
+                        printf("File created successfully in directory '%s'.\n", d);
                         break;
                     }
                 }
@@ -49,11 +49,11 @@ void main() {
                 break;
 
             case 3:
-                printf("Enter the name of the directory: ");
+                printf("Enter the directory name: ");
                 scanf("%s", d);
                 for (i = 0; i < dcnt; i++) {
                     if (strcmp(d, dir[i].dname) == 0) {
-                        printf("Enter the name of the file to delete: ");
+                        printf("Enter the file name: ");
                         scanf("%s", f);
                         for (k = 0; k < dir[i].fcnt; k++) {
                             if (strcmp(f, dir[i].fname[k]) == 0) {
@@ -71,11 +71,11 @@ void main() {
                 end_delete: break;
 
             case 4:
-                printf("Enter the name of the directory: ");
+                printf("Enter the directory name: ");
                 scanf("%s", d);
                 for (i = 0; i < dcnt; i++) {
                     if (strcmp(d, dir[i].dname) == 0) {
-                        printf("Enter the name of the file to search: ");
+                        printf("Enter the file name: ");
                         scanf("%s", f);
                         for (k = 0; k < dir[i].fcnt; k++) {
                             if (strcmp(f, dir[i].fname[k]) == 0) {
