@@ -27,14 +27,14 @@ void main() {
 
         switch (ch) {
             case 1:
-                printf("Enter the name of the file to create: ");
+                printf("Enter the file name: ");
                 scanf("%s", dir.fname[dir.fcnt]);
                 dir.fcnt++;
                 printf("File created successfully.\n");
                 break;
 
             case 2:
-                printf("Enter the name of the file to delete: ");
+                printf("Enter the file name: ");
                 scanf("%s", f);
                 for (i = 0; i < dir.fcnt; i++) {
                     if (strcmp(f, dir.fname[i]) == 0) {
@@ -49,7 +49,7 @@ void main() {
                 break;
 
             case 3:
-                printf("Enter the name of the file to search: ");
+                printf("Enter the file name: ");
                 scanf("%s", f);
                 for (i = 0; i < dir.fcnt; i++) {
                     if (strcmp(f, dir.fname[i]) == 0) {
