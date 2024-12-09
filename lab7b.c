@@ -17,16 +17,14 @@ void main() {
         frm[i] = -1;
 
     for (i = 0; i < 50; i++)
-	recent[i] = -1;
+	    recent[i] = -1;
 
-    printf("\nReference String: ");
-    for (i = 0; i < nor; i++)
-	printf("%d ", ref[i]);
-    printf("\n");
+    // printf("\nReference String: ");
+    printf("\nRef. String\tPage Frames\n");
 
     for (i = 0; i < nor; i++) {
         int flag = 0;
-        printf("\nRef %d -> ", ref[i]);
+        printf("%d\t\t", ref[i]);
         for (j = 0; j < nof; j++) {
             if (frm[j] == ref[i]) {
                 flag = 1;
@@ -46,11 +44,11 @@ void main() {
         }
 
         for (j = 0; j < nof; j++)
-            printf("%d ", frm[j] == -1 ? -1 : frm[j]);
+            (frm[j] == -1) ? printf("- ") : printf("%d ", frm[j]);
         recent[ref[i]] = i;
     }
 
-    printf("\n\nTotal Page Faults: %d\n", pf);
+    printf("\nTotal Page Faults: %d\n", pf);
 }
 
 int lruvictim() {
