@@ -46,6 +46,7 @@ void main() {
         for (j = 0; j < nof; j++)
             (frm[j] == -1) ? printf("- ") : printf("%d ", frm[j]);
         recent[ref[i]] = i;
+        printf("\n");
     }
 
     printf("\nTotal Page Faults: %d\n", pf);

@@ -41,5 +41,5 @@ void main() {
         printf("\n");
     }
 
-    printf("Total Page Faults: %d\n", pf);
+    printf("\nTotal Page Faults: %d\n", pf);
 }
